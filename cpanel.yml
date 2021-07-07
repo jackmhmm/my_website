@@ -2,4 +2,13 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home2/jackcorn/public_html/
-    - /bin/cp -R * $DEPLOYPATH
+    - /bin/cp *.html $DEPLOYPATH
+
+    - export DEPLOYPATH2=/home2/jackcorn/public_html/components/
+    - /bin/cp components/header.js $DEPLOYPATH2
+
+    - export DEPLOYPATH3=/home2/jackcorn/public_html/CSS/
+    - /bin/cp CSS/styles.css $DEPLOYPATH3
+
+    - export DEPLOYPATH4=/home2/jackcorn/public_html/media
+    - /bin/cp -R media $DEPLOYPATH4
