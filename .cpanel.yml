@@ -1,8 +1,10 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH=/home/jackcorn/public_html/
-    - export REPOPATH=/home/jackcorn/repositories/my_website/
+    - export DEPLOYPATH=/home/jackcorn/public_html
+    # - export REPOPATH=/home/jackcorn/repositories/my_website/
+
+    - /bin/cp -r /home/jackcorn/repositories/my_website/* $DEPLOYPATH
 
     #remove old files, if any
     # - /bin/rm -Rf ${DEPLOYPATH}_old
@@ -12,7 +14,7 @@ deployment:
 
     #Sync repo files to the deploy target path, excluding .git folder.
     #--delete-after will remove deleted files and folders after syncing.
-    - /bin/rsync -av --exclude=.git ${REPOPATH} ${DEPLOYPATH} #--delete-after
+    # - /bin/rsync -av --exclude=.git ${REPOPATH} ${DEPLOYPATH} #--delete-after
 
     #set correct permissions
     #- /bin/chmod 755 ${DEPLOYPATH}
