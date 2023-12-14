@@ -9,7 +9,7 @@ class Header extends HTMLElement{
         <br>
         <div style="width: 50%; float:left">
             <a href="index.html"><h1>Jack Cornish</h1></a>
-            <p>Animator and FX Artist</p>
+            <p>3D Generalist/FX Artist/Animator</p>
         </div>
 
         <div style="float: right; margin: 1%;">
