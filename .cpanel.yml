@@ -1,8 +1,8 @@
 ---
 deployment:
   tasks:
-    - export DEPLOYPATH = /home2/jackcorn/public_html
-    - export REPOPATH = /home2/jackcorn/repositories/my_website
+    - export DEPLOYPATH = /home/jackcorn/public_html
+    - export REPOPATH = /home/jackcorn/repositories/my_website
 
     #remove old files, if any
     - /bin/rm -Rf ${DEPLOYPATH}_old
